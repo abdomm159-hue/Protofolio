@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdullah Faraj — Portfolio</title>
+<style>
+  :root{
+    --ink:#121212; --cream:#f3efe6; --accent:#e0483b; --muted:#8a8a8a;
+    --bg:#f3efe6; --fg:#121212; --card:#ffffff;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box}
+  html{scroll-padding-top:env(safe-area-inset-top,0px)}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){--bg:#121212;--fg:#f3efe6;--card:#1b1b1b;--muted:#9a9a9a}
+  }
+  :root[data-theme="dark"]{--bg:#121212;--fg:#f3efe6;--card:#1b1b1b;--muted:#9a9a9a}
+
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  section{padding:96px 0}
+  @media (max-width:640px){ section{padding:64px 0} }
+
+  /* Hero */
+  .hero{background:var(--ink);color:var(--cream);padding:88px 0 72px}
+  .hero .wrap{display:flex;flex-direction:column;gap:28px}
+  .eyebrow{font-size:13px;letter-spacing:3px;color:var(--accent);font-weight:700}
+  .title{font-size:clamp(48px,10vw,112px);font-weight:800;line-height:0.95;text-transform:uppercase;text-wrap:balance}
+  .title .accent{color:var(--accent)}
+  .tagline{font-size:18px;color:#cfc9ba;max-width:560px}
+  .hero-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid #333;padding-top:24px;margin-top:12px}
+  .name{font-size:22px;font-weight:700}
+  .role{font-size:13px;color:#8a8a8a}
+  .link{font-size:13px;color:#cfc9ba;text-decoration:none}
+  .link:hover{color:var(--accent)}
+
+  h2{font-size:clamp(32px,6vw,48px);font-weight:800;margin:0 0 24px;text-wrap:balance}
+  h2 .accent{color:var(--accent)}
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .chip{border:1px solid var(--fg);border-radius:20px;padding:8px 18px;font-size:14px}
+
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;font-size:15px;margin-top:8px}
+  @media (max-width:560px){ .grid2{grid-template-columns:1fr} }
+  .label{font-size:13px;letter-spacing:2px;color:var(--muted);font-weight:700;margin:28px 0 12px}
+
+  .project{border-top:1px solid var(--fg);padding-top:40px;margin-top:40px}
+  .project:first-of-type{border-top:none;margin-top:0;padding-top:0}
+  .ptag{font-size:13px;letter-spacing:2px;color:var(--accent);font-weight:700}
+  .pname{font-size:clamp(26px,5vw,34px);font-weight:800;margin:6px 0}
+  .pmeta{font-size:13px;color:var(--muted)}
+  .meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;font-size:14px;border-top:1px solid var(--fg);border-bottom:1px solid var(--fg);padding:18px 0;margin:20px 0}
+  @media (max-width:560px){ .meta-grid{grid-template-columns:1fr} }
+  .meta-grid .k{color:var(--muted);margin-bottom:4px}
+  .desc{font-size:16px;line-height:1.65}
+  .findings{display:flex;flex-direction:column;gap:10px;font-size:14px;margin-top:16px}
+  .findings div{display:flex;gap:12px}
+  .findings .num{font-weight:700;color:var(--accent);flex-shrink:0}
+
+  .contact{background:var(--ink);color:var(--cream)}
+  .contact .wrap{display:flex;flex-direction:column;gap:28px}
+  .big{font-size:clamp(40px,9vw,72px);font-weight:800;line-height:1.05}
+  .rows{border-top:1px solid #333;padding-top:24px;display:flex;flex-direction:column;gap:12px;font-size:16px}
+  .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+  .row .k{color:#8a8a8a}
+  .row a{color:var(--cream);text-decoration:none}
+  .row a:hover{color:var(--accent)}
+  .footline{display:flex;justify-content:space-between;margin-top:8px;border-top:1px solid #333;padding-top:16px;font-size:13px;color:#8a8a8a}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">CYBERSECURITY</div>
+    <div class="title">PORT<span class="accent"><br>FOLIO</span></div>
+    <div class="tagline">Penetration testing is a craft of patience — every system has a story, and I'm here to find it before someone else does.</div>
+    <div class="hero-foot">
+      <div>
+        <div class="name">Abdullah Faraj</div>
+        <div class="role">Penetration Tester &amp; Security Researcher</div>
+      </div>
+      <a class="link" href="https://khamsat.com/user/faragello0">khamsat.com/user/faragello0</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>About <span class="accent">Me</span></h2>
+    <p class="desc">I'm a Computer Science student specializing in penetration testing and cybersecurity. I study how web applications, networks and mobile platforms break under pressure, then translate that into clear reports that help teams fix what matters most.</p>
+    <div class="label">FOCUS AREAS</div>
+    <div class="grid2">
+      <div>Web Application Security</div>
+      <div>Network Penetration Testing</div>
+      <div>Android Application Security</div>
+      <div>Vulnerability Research</div>
+      <div>OWASP Top 10</div>
+      <div>Security Reporting</div>
+    </div>
+    <div class="label">TOOLS</div>
+    <div class="chips">
+      <div class="chip">Burp Suite</div>
+      <div class="chip">Nmap</div>
+      <div class="chip">Metasploit</div>
+      <div class="chip">Wireshark</div>
+      <div class="chip">Kali Linux</div>
+      <div class="chip">OWASP ZAP</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Selected <span class="accent">Projects</span></h2>
+
+    <div class="project">
+      <div class="ptag">PROJECT No_01</div>
+      <div class="pname">Web App Security Assessment</div>
+      <div class="pmeta">Web Application Penetration Test</div>
+      <div class="meta-grid">
+        <div><div class="k">TARGET</div>Intentionally vulnerable practice app (OWASP Juice Shop lab)</div>
+        <div><div class="k">TOOLS</div>Burp Suite, OWASP ZAP, manual testing</div>
+        <div><div class="k">SCOPE</div>Authentication, input handling, access control</div>
+        <div><div class="k">METHOD</div>OWASP Testing Guide / Top 10 checklist</div>
+      </div>
+      <p class="desc">A hands-on assessment of a deliberately vulnerable web application used to practice real-world methodology end to end: reconnaissance, mapping the attack surface, then systematically testing for injection flaws, broken authentication, and access-control weaknesses.</p>
+      <div class="findings">
+        <div><span class="num">01</span><span>SQL injection in a search parameter allowing data exposure</span></div>
+        <div><span class="num">02</span><span>Broken access control allowing a user to view another account's orders</span></div>
+        <div><span class="num">03</span><span>Weak password policy with no rate-limiting on login attempts</span></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="ptag">PROJECT No_02</div>
+      <div class="pname">Internal Network Penetration Test</div>
+      <div class="pmeta">Network Security Assessment</div>
+      <div class="meta-grid">
+        <div><div class="k">TARGET</div>Simulated internal network (lab environment)</div>
+        <div><div class="k">TOOLS</div>Nmap, Metasploit, Wireshark</div>
+        <div><div class="k">SCOPE</div>Host discovery, service enumeration, misconfigurations</div>
+        <div><div class="k">METHOD</div>PTES-aligned testing workflow</div>
+      </div>
+      <p class="desc">A simulated internal network assessment practicing the full flow of a network engagement: scanning and fingerprinting live hosts, enumerating exposed services, and identifying outdated software and misconfigured permissions.</p>
+      <div class="findings">
+        <div><span class="num">01</span><span>Outdated SMB service vulnerable to a known remote exploit</span></div>
+        <div><span class="num">02</span><span>Default credentials left active on a network device</span></div>
+        <div><span class="num">03</span><span>Unencrypted protocol exposing credentials on the local segment</span></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="ptag">CAPSTONE — PROJECT No_03</div>
+      <div class="pname">Full-Scope Security Engagement</div>
+      <div class="pmeta">Web, Network &amp; Android Capstone</div>
+      <div class="meta-grid">
+        <div><div class="k">TARGET</div>Combined lab: web, network &amp; Android app</div>
+        <div><div class="k">TOOLS</div>Burp Suite, Nmap, MobSF, ADB</div>
+        <div><div class="k">SCOPE</div>End-to-end recon, exploitation &amp; reporting</div>
+        <div><div class="k">DELIVERABLE</div>Full client-style penetration test report</div>
+      </div>
+      <p class="desc">The capstone of my penetration testing track, bringing together web, network and Android testing into one engagement — reconnaissance, hands-on exploitation, and a structured report with an executive summary and prioritized remediation steps.</p>
+      <div class="findings">
+        <div><span class="num">01</span><span>Practiced a full engagement lifecycle from scoping to final report</span></div>
+        <div><span class="num">02</span><span>Learned to translate technical findings into business risk</span></div>
+        <div><span class="num">03</span><span>Built a reusable reporting template for future client work</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div class="eyebrow">GET IN TOUCH</div>
+    <div class="big">Let's secure<br>something<br>together.</div>
+    <div class="rows">
+      <div class="row"><span class="k">Khamsat</span><a href="https://khamsat.com/user/faragello0">khamsat.com/user/faragello0</a></div>
+      <div class="row"><span class="k">Email</span><a href="mailto:abdomm159@gmail.com">abdomm159@gmail.com</a></div>
+      <div class="row"><span class="k">Phone</span><a href="tel:+201093264624">01093264624</a></div>
+      <div class="row"><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/abdullah-faraj-8632a740b">linkedin.com/in/abdullah-faraj-8632a740b</a></div>
+    </div>
+    <div class="footline"><span>Abdullah Faraj</span><span>Portfolio 2026</span></div>
+  </div>
+</section>
+
+</body>
+</html>
